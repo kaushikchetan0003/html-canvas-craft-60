@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "CareNest provides compassionate, hospital-grade home nursing across Delhi NCR — ICU, elderly care, post-surgical recovery and more, delivered by verified specialists.",
       },
       { name: "author", content: "CareNest" },
-      { property: "og:title", content: "CareNest | Home Nursing Services in Delhi NCR" },
+      { property: "og:title", content: "CareNest | Professional Home Nursing Services in Delhi NCR" },
       {
         property: "og:description",
         content:
@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "CareNest | Professional Home Nursing Services in Delhi NCR" },
+      { name: "description", content: "Happy Pages Builder allows users to create and manage web pages with interactive elements." },
+      { property: "og:description", content: "Happy Pages Builder allows users to create and manage web pages with interactive elements." },
+      { name: "twitter:description", content: "Happy Pages Builder allows users to create and manage web pages with interactive elements." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/56f1efbb-5a60-45b9-9445-a7998a5b5f56/id-preview-e4e86016--a2d613ec-154c-4000-b827-783f3338d4a6.lovable.app-1783098713707.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/56f1efbb-5a60-45b9-9445-a7998a5b5f56/id-preview-e4e86016--a2d613ec-154c-4000-b827-783f3338d4a6.lovable.app-1783098713707.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
