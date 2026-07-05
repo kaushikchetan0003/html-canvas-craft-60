@@ -62,13 +62,11 @@ function BookPage() {
                 </p>
               </div>
             ) : (
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setSubmitted(true);
-                }}
+              <form action="https://api.web3forms.com/submit" method="POST"
+               
                 className="space-y-8"
               >
+                  <input type="hidden" name="access_key" value="2ccd2626-7d4f-4e08-a7e1-60eb11e7ed1d"></input>
                 <div>
                   <h2 className="font-display text-2xl font-bold mb-1">Patient details</h2>
                   <p className="text-on-surface-variant text-sm">
@@ -77,18 +75,18 @@ function BookPage() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <Field label="Patient name">
-                    <input required className={inputCls} placeholder="Full name" />
+                    <input required className={inputCls} placeholder="Full name" name="name"  />
                   </Field>
                   <Field label="Age">
                     <input required type="number" min={0} className={inputCls} placeholder="e.g. 72" />
                   </Field>
                   <Field label="Contact number">
-                    <input required type="tel" className={inputCls} placeholder="+91 XXXXX XXXXX" />
+                    <input required type="tel" className={inputCls} placeholder="+91 XXXXX XXXXX" name="message" />
                   </Field>
                   <Field label="Email (optional)">
                     <input type="email" className={inputCls} placeholder="you@example.com" />
                   </Field>
-                  <Field label="Care address" className="md:col-span-2">
+                    <Field label="Care address" className="md:col-span-2">
                     <input required className={inputCls} placeholder="House, street, area, city" />
                   </Field>
                   <Field label="Type of care">
@@ -150,9 +148,9 @@ function BookPage() {
               <p className="opacity-90 text-sm mb-4">
                 Need care within the hour? Call our 24×7 line and we'll dispatch the nearest available nurse.
               </p>
-              <a href="tel:+919999999999" className="inline-flex items-center gap-2 bg-white text-primary px-4 py-2.5 rounded-xl font-medium text-sm">
+              <a href="tel:+919818744116" className="inline-flex items-center gap-2 bg-white text-primary px-4 py-2.5 rounded-xl font-medium text-sm">
                 <span className="material-symbols-outlined text-[18px]">call</span>
-                +91 99999 99999
+                +91-9818744116
               </a>
             </div>
 
