@@ -62,62 +62,179 @@ function BookPage() {
                 </p>
               </div>
             ) : (
-              <form action="https://api.web3forms.com/submit" method="POST"
-               
-                className="space-y-8"
-              >
-                  <input type="hidden" name="access_key" value="db5c276d-c548-4a9d-813b-903d104ab763"></input>
-                <div>
-                  <h2 className="font-display text-2xl font-bold mb-1">Patient details</h2>
-                  <p className="text-on-surface-variant text-sm">
-                    Everything you share stays private and is used only to arrange care.
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                  <Field label="Patient name">
-                    <input required className={inputCls} placeholder="Full name" name="name"  />
-                  </Field>
-                  <Field label="Age">
-                    <input required type="number" min={0} className={inputCls} placeholder="e.g. 72" />
-                  </Field>
-                  <Field label="Contact number">
-                    <input required type="tel" className={inputCls} placeholder="+91 XXXXX XXXXX" name="message" />
-                  </Field>
-                  <Field label="Email (optional)">
-                    <input type="email" className={inputCls} placeholder="you@example.com" />
-                  </Field>
-                    <Field label="Care address" className="md:col-span-2">
-                    <input required className={inputCls} placeholder="House, street, area, city" />
-                  </Field>
-                  <Field label="Type of care">
-                    <select required className={inputCls} defaultValue="">
-                      <option value="" disabled>Select service</option>
-                      {careTypes.map((c) => <option key={c}>{c}</option>)}
-                    </select>
-                  </Field>
-                  <Field label="Duration">
-                    <select required className={inputCls} defaultValue="">
-                      <option value="" disabled>Select duration</option>
-                      {durations.map((d) => <option key={d}>{d}</option>)}
-                    </select>
-                  </Field>
-                  <Field label="Preferred start date">
-                    <input required type="date" className={inputCls} />
-                  </Field>
-                  <Field label="Preferred start time">
-                    <input required type="time" className={inputCls} />
-                  </Field>
-                  <Field label="Medical notes (optional)" className="md:col-span-2">
-                    <textarea rows={4} className={inputCls} placeholder="Diagnosis, mobility, medication schedule..." />
-                  </Field>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-primary text-on-primary px-6 py-4 rounded-xl font-medium text-base shadow-lg shadow-primary/25 hover:opacity-90"
-                >
-                  Request a Nurse
-                </button>
-              </form>
+            <form
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  className="space-y-8"
+>
+  {/* Web3Forms Access Key */}
+  <input
+    type="hidden"
+    name="access_key"
+    value="2ccd2626-7d4f-4e08-a7e1-60eb11e7ed1d"
+  />
+
+  {/* Email Subject */}
+  <input
+    type="hidden"
+    name="subject"
+    value="New CareNest Nurse Booking Request"
+  />
+
+  {/* Redirect after submit (Optional) */}
+  {/* <input
+    type="hidden"
+    name="redirect"
+    value="https://yourwebsite.com/thank-you"
+  /> */}
+
+  <div>
+    <h2 className="font-display text-2xl font-bold mb-1">
+      Patient Details
+    </h2>
+
+    <p className="text-on-surface-variant text-sm">
+      Everything you share stays private and is used only to arrange care.
+    </p>
+  </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+    {/* Patient Name */}
+    <Field label="Patient name">
+      <input
+        required
+        name="name"
+        className={inputCls}
+        placeholder="Full Name"
+      />
+    </Field>
+
+    {/* Age */}
+    <Field label="Age">
+      <input
+        required
+        type="number"
+        min="0"
+        name="age"
+        className={inputCls}
+        placeholder="e.g. 72"
+      />
+    </Field>
+
+    {/* Phone */}
+    <Field label="Contact number">
+      <input
+        required
+        type="tel"
+        name="phone"
+        className={inputCls}
+        placeholder="+91 XXXXX XXXXX"
+      />
+    </Field>
+
+    {/* Email */}
+    <Field label="Email (Optional)">
+      <input
+        type="email"
+        name="email"
+        className={inputCls}
+        placeholder="you@example.com"
+      />
+    </Field>
+
+    {/* Address */}
+    <Field label="Care Address" className="md:col-span-2">
+      <input
+        required
+        name="address"
+        className={inputCls}
+        placeholder="House, Street, Area, City"
+      />
+    </Field>
+
+    {/* Care Type */}
+    <Field label="Type of Care">
+      <select
+        required
+        name="care_type"
+        className={inputCls}
+        defaultValue=""
+      >
+        <option value="" disabled>
+          Select Service
+        </option>
+
+        {careTypes.map((c) => (
+          <option key={c} value={c}>
+            {c}
+          </option>
+        ))}
+      </select>
+    </Field>
+
+    {/* Duration */}
+    <Field label="Duration">
+      <select
+        required
+        name="duration"
+        className={inputCls}
+        defaultValue=""
+      >
+        <option value="" disabled>
+          Select Duration
+        </option>
+
+        {durations.map((d) => (
+          <option key={d} value={d}>
+            {d}
+          </option>
+        ))}
+      </select>
+    </Field>
+
+    {/* Start Date */}
+    <Field label="Preferred Start Date">
+      <input
+        required
+        type="date"
+        name="start_date"
+        className={inputCls}
+      />
+    </Field>
+
+    {/* Start Time */}
+    <Field label="Preferred Start Time">
+      <input
+        required
+        type="time"
+        name="start_time"
+        className={inputCls}
+      />
+    </Field>
+
+    {/* Medical Notes */}
+    <Field
+      label="Medical Notes (Optional)"
+      className="md:col-span-2"
+    >
+      <textarea
+        rows={5}
+        name="medical_notes"
+        className={inputCls}
+        placeholder="Diagnosis, mobility, medication schedule..."
+      />
+    </Field>
+
+  </div>
+
+  <button
+    type="submit"
+    className="w-full bg-primary text-on-primary px-6 py-4 rounded-xl font-medium text-base shadow-lg shadow-primary/25 hover:opacity-90"
+  >
+    Request a Nurse
+  </button>
+</form>
             )}
           </div>
 
