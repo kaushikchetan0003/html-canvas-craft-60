@@ -78,7 +78,7 @@ function ContactPage() {
                 action="https://api.web3forms.com/submit" method="POST"
                 className="grid grid-cols-1 md:grid-cols-2 gap-5"
               >
-                 <input type="hidden" name="access_key" value="2ccd2626-7d4f-4e08-a7e1-60eb11e7ed1d"></input>
+                 <input type="hidden" name="access_key" value="db5c276d-c548-4a9d-813b-903d104ab763"></input>
                 <label className="flex flex-col gap-2">
                   <span className="text-sm font-medium">Full name</span>
                   <input required className={inputCls} placeholder="Your name" name="name"/>
