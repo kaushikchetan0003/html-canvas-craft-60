@@ -40,9 +40,9 @@ function ContactPage() {
           <div className="space-y-4">
             <h2 className="font-display text-2xl font-bold mb-2">Contact Information</h2>
             {[
-              { icon: "call", title: "Care Hotline", value: "+91 99999 99999", href: "tel:+919999999999" },
-              { icon: "chat", title: "WhatsApp", value: "+91 99999 99999", href: "https://wa.me/919999999999" },
-              { icon: "mail", title: "Email", value: "care@carenest.in", href: "mailto:care@carenest.in" },
+              { icon: "call", title: "Care Hotline", value: "+91-9818744116", href: "tel:+919818744116" },
+              { icon: "chat", title: "WhatsApp", value: "+91 9818744116", href: "https://wa.me/919818744116" },
+              { icon: "mail", title: "Email", value: "seema9sharmajune@gmail.com", href: "mailto:seema9sharmajune@gmail.com" },
               { icon: "schedule", title: "Availability", value: "24 hours × 7 days" },
             ].map((c) => (
               <a
