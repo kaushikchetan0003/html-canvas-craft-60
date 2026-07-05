@@ -67,7 +67,7 @@ export function SiteFooter() {
         </div>
         <div className="pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-on-surface-variant">
           <p>© {new Date().getFullYear()} CareNest Nursing Services. All rights reserved.</p>
-          <p>Made with care in Delhi NCR.</p>
+          <p>Made with care by Chetan Kaushik.</p>
         </div>
       </div>
     </footer>
