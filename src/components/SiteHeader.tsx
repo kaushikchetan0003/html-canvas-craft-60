@@ -23,7 +23,7 @@ export function SiteHeader() {
             medical_services
           </span>
           <span className="font-display text-2xl font-bold text-primary tracking-tight">
-            CareNest
+            Nursing Home NCR
           </span>
         </Link>
         <nav className="hidden md:flex items-center gap-1">
