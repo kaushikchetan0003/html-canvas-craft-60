@@ -7,7 +7,7 @@ const HERO_IMG =
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "CareNest | Home Nursing Services in Delhi NCR" },
+      { title: "Nursing Home NCR | Home Nursing Services in Delhi NCR" },
       {
         name: "description",
         content:
@@ -122,7 +122,7 @@ function HomePage() {
             <div className="rounded-[2rem] overflow-hidden shadow-2xl relative z-10 border-4 border-white">
               <img
                 src={HERO_IMG}
-                alt="CareNest nurse caring for a patient at home"
+                alt="Nursing Home NCR nurse caring for a patient at home"
                 className="w-full h-auto object-cover aspect-[4/3]"
               />
             </div>
@@ -209,7 +209,7 @@ function HomePage() {
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
           <div className="text-center mb-14">
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-              Why Delhi NCR Trusts CareNest
+              Why Delhi NCR Trusts Nursing Home NCR
             </h2>
             <p className="text-on-surface-variant max-w-2xl mx-auto">
               Our promise: clinically excellent, deeply human care — every visit, every family.
@@ -276,7 +276,7 @@ function HomePage() {
                 Book a Nurse
               </Link>
               <a
-                href="tel:+919999999999"
+                href="tel:+919818744116"
                 className="border-2 border-white/60 text-white px-6 py-3.5 rounded-xl font-medium hover:bg-white/10"
               >
                 Call Now
