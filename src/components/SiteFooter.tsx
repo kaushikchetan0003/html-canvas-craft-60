@@ -13,7 +13,7 @@ export function SiteFooter() {
               >
                 medical_services
               </span>
-              <span className="font-display text-2xl font-bold text-primary">CareNest</span>
+              <span className="font-display text-2xl font-bold text-primary">Nursing Home NCR</span>
             </div>
             <p className="text-on-surface-variant text-sm mb-6 max-w-xs">
               Delhi NCR's leading provider of premium home healthcare and specialized nursing services.
